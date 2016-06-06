@@ -31,61 +31,65 @@
             this.components = new System.ComponentModel.Container();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.CardsHolder = new System.Windows.Forms.Panel();
-            this.Card1 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard11 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard3 = new System.Windows.Forms.PictureBox();
-            this.Card3 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard2 = new System.Windows.Forms.PictureBox();
-            this.Card2 = new System.Windows.Forms.PictureBox();
-            this.Card6 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard5 = new System.Windows.Forms.PictureBox();
-            this.Card5 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard4 = new System.Windows.Forms.PictureBox();
-            this.Card4 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard6 = new System.Windows.Forms.PictureBox();
-            this.DulicateCard9 = new System.Windows.Forms.PictureBox();
-            this.Card7 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard7 = new System.Windows.Forms.PictureBox();
-            this.Card8 = new System.Windows.Forms.PictureBox();
-            this.DuplicateCard8 = new System.Windows.Forms.PictureBox();
-            this.Card9 = new System.Windows.Forms.PictureBox();
             this.DuplicateCard12 = new System.Windows.Forms.PictureBox();
             this.Card10 = new System.Windows.Forms.PictureBox();
             this.DulicateCard10 = new System.Windows.Forms.PictureBox();
             this.Card11 = new System.Windows.Forms.PictureBox();
             this.DulicateCard11 = new System.Windows.Forms.PictureBox();
             this.Card12 = new System.Windows.Forms.PictureBox();
+            this.DulicateCard9 = new System.Windows.Forms.PictureBox();
+            this.Card7 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard7 = new System.Windows.Forms.PictureBox();
+            this.Card8 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard8 = new System.Windows.Forms.PictureBox();
+            this.Card9 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard6 = new System.Windows.Forms.PictureBox();
+            this.Card4 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard4 = new System.Windows.Forms.PictureBox();
+            this.Card5 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard5 = new System.Windows.Forms.PictureBox();
+            this.Card6 = new System.Windows.Forms.PictureBox();
+            this.Card2 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard2 = new System.Windows.Forms.PictureBox();
+            this.Card3 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard3 = new System.Windows.Forms.PictureBox();
+            this.DuplicateCard11 = new System.Windows.Forms.PictureBox();
+            this.Card1 = new System.Windows.Forms.PictureBox();
+            this.ScoreLabel = new System.Windows.Forms.Label();
+            this.ScoreCounter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.CardsHolder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Card1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DulicateCard9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DulicateCard10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DulicateCard11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DulicateCard9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card1)).BeginInit();
             this.SuspendLayout();
             // 
             // CardsHolder
             // 
             this.CardsHolder.BackgroundImage = global::MemoryGame.Properties.Resources._1934878_10156343642085285_1588962466819514640_n;
+            this.CardsHolder.Controls.Add(this.ScoreCounter);
+            this.CardsHolder.Controls.Add(this.ScoreLabel);
             this.CardsHolder.Controls.Add(this.DuplicateCard12);
             this.CardsHolder.Controls.Add(this.Card10);
             this.CardsHolder.Controls.Add(this.DulicateCard10);
@@ -112,153 +116,9 @@
             this.CardsHolder.Controls.Add(this.Card1);
             this.CardsHolder.Location = new System.Drawing.Point(12, 12);
             this.CardsHolder.Name = "CardsHolder";
-            this.CardsHolder.Size = new System.Drawing.Size(905, 639);
+            this.CardsHolder.Size = new System.Drawing.Size(1060, 639);
             this.CardsHolder.TabIndex = 0;
             this.CardsHolder.Paint += new System.Windows.Forms.PaintEventHandler(this.CardsHolder_Paint);
-            // 
-            // Card1
-            // 
-            this.Card1.Location = new System.Drawing.Point(32, 13);
-            this.Card1.Name = "Card1";
-            this.Card1.Size = new System.Drawing.Size(130, 150);
-            this.Card1.TabIndex = 0;
-            this.Card1.TabStop = false;
-            // 
-            // DuplicateCard11
-            // 
-            this.DuplicateCard11.Location = new System.Drawing.Point(168, 13);
-            this.DuplicateCard11.Name = "DuplicateCard11";
-            this.DuplicateCard11.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard11.TabIndex = 1;
-            this.DuplicateCard11.TabStop = false;
-            // 
-            // DuplicateCard3
-            // 
-            this.DuplicateCard3.Location = new System.Drawing.Point(712, 13);
-            this.DuplicateCard3.Name = "DuplicateCard3";
-            this.DuplicateCard3.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard3.TabIndex = 2;
-            this.DuplicateCard3.TabStop = false;
-            // 
-            // Card3
-            // 
-            this.Card3.Location = new System.Drawing.Point(576, 13);
-            this.Card3.Name = "Card3";
-            this.Card3.Size = new System.Drawing.Size(130, 150);
-            this.Card3.TabIndex = 3;
-            this.Card3.TabStop = false;
-            // 
-            // DuplicateCard2
-            // 
-            this.DuplicateCard2.Location = new System.Drawing.Point(440, 13);
-            this.DuplicateCard2.Name = "DuplicateCard2";
-            this.DuplicateCard2.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard2.TabIndex = 4;
-            this.DuplicateCard2.TabStop = false;
-            // 
-            // Card2
-            // 
-            this.Card2.Location = new System.Drawing.Point(304, 13);
-            this.Card2.Name = "Card2";
-            this.Card2.Size = new System.Drawing.Size(130, 150);
-            this.Card2.TabIndex = 5;
-            this.Card2.TabStop = false;
-            // 
-            // Card6
-            // 
-            this.Card6.Location = new System.Drawing.Point(576, 172);
-            this.Card6.Name = "Card6";
-            this.Card6.Size = new System.Drawing.Size(130, 150);
-            this.Card6.TabIndex = 6;
-            this.Card6.TabStop = false;
-            // 
-            // DuplicateCard5
-            // 
-            this.DuplicateCard5.Location = new System.Drawing.Point(440, 172);
-            this.DuplicateCard5.Name = "DuplicateCard5";
-            this.DuplicateCard5.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard5.TabIndex = 7;
-            this.DuplicateCard5.TabStop = false;
-            // 
-            // Card5
-            // 
-            this.Card5.Location = new System.Drawing.Point(304, 172);
-            this.Card5.Name = "Card5";
-            this.Card5.Size = new System.Drawing.Size(130, 150);
-            this.Card5.TabIndex = 8;
-            this.Card5.TabStop = false;
-            // 
-            // DuplicateCard4
-            // 
-            this.DuplicateCard4.Location = new System.Drawing.Point(168, 172);
-            this.DuplicateCard4.Name = "DuplicateCard4";
-            this.DuplicateCard4.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard4.TabIndex = 9;
-            this.DuplicateCard4.TabStop = false;
-            // 
-            // Card4
-            // 
-            this.Card4.Location = new System.Drawing.Point(32, 172);
-            this.Card4.Name = "Card4";
-            this.Card4.Size = new System.Drawing.Size(130, 150);
-            this.Card4.TabIndex = 10;
-            this.Card4.TabStop = false;
-            // 
-            // DuplicateCard6
-            // 
-            this.DuplicateCard6.Location = new System.Drawing.Point(712, 172);
-            this.DuplicateCard6.Name = "DuplicateCard6";
-            this.DuplicateCard6.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard6.TabIndex = 11;
-            this.DuplicateCard6.TabStop = false;
-            // 
-            // DulicateCard9
-            // 
-            this.DulicateCard9.Location = new System.Drawing.Point(712, 328);
-            this.DulicateCard9.Name = "DulicateCard9";
-            this.DulicateCard9.Size = new System.Drawing.Size(130, 150);
-            this.DulicateCard9.TabIndex = 17;
-            this.DulicateCard9.TabStop = false;
-            // 
-            // Card7
-            // 
-            this.Card7.Location = new System.Drawing.Point(32, 328);
-            this.Card7.Name = "Card7";
-            this.Card7.Size = new System.Drawing.Size(130, 150);
-            this.Card7.TabIndex = 16;
-            this.Card7.TabStop = false;
-            // 
-            // DuplicateCard7
-            // 
-            this.DuplicateCard7.Location = new System.Drawing.Point(168, 328);
-            this.DuplicateCard7.Name = "DuplicateCard7";
-            this.DuplicateCard7.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard7.TabIndex = 15;
-            this.DuplicateCard7.TabStop = false;
-            // 
-            // Card8
-            // 
-            this.Card8.Location = new System.Drawing.Point(304, 328);
-            this.Card8.Name = "Card8";
-            this.Card8.Size = new System.Drawing.Size(130, 150);
-            this.Card8.TabIndex = 14;
-            this.Card8.TabStop = false;
-            // 
-            // DuplicateCard8
-            // 
-            this.DuplicateCard8.Location = new System.Drawing.Point(440, 328);
-            this.DuplicateCard8.Name = "DuplicateCard8";
-            this.DuplicateCard8.Size = new System.Drawing.Size(130, 150);
-            this.DuplicateCard8.TabIndex = 13;
-            this.DuplicateCard8.TabStop = false;
-            // 
-            // Card9
-            // 
-            this.Card9.Location = new System.Drawing.Point(576, 328);
-            this.Card9.Name = "Card9";
-            this.Card9.Size = new System.Drawing.Size(130, 150);
-            this.Card9.TabIndex = 12;
-            this.Card9.TabStop = false;
             // 
             // DuplicateCard12
             // 
@@ -308,13 +168,180 @@
             this.Card12.TabIndex = 18;
             this.Card12.TabStop = false;
             // 
+            // DulicateCard9
+            // 
+            this.DulicateCard9.Location = new System.Drawing.Point(712, 328);
+            this.DulicateCard9.Name = "DulicateCard9";
+            this.DulicateCard9.Size = new System.Drawing.Size(130, 150);
+            this.DulicateCard9.TabIndex = 17;
+            this.DulicateCard9.TabStop = false;
+            // 
+            // Card7
+            // 
+            this.Card7.Location = new System.Drawing.Point(32, 328);
+            this.Card7.Name = "Card7";
+            this.Card7.Size = new System.Drawing.Size(130, 150);
+            this.Card7.TabIndex = 16;
+            this.Card7.TabStop = false;
+            // 
+            // DuplicateCard7
+            // 
+            this.DuplicateCard7.Location = new System.Drawing.Point(168, 328);
+            this.DuplicateCard7.Name = "DuplicateCard7";
+            this.DuplicateCard7.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard7.TabIndex = 15;
+            this.DuplicateCard7.TabStop = false;
+            // 
+            // Card8
+            // 
+            this.Card8.Location = new System.Drawing.Point(304, 328);
+            this.Card8.Name = "Card8";
+            this.Card8.Size = new System.Drawing.Size(130, 150);
+            this.Card8.TabIndex = 14;
+            this.Card8.TabStop = false;
+            // 
+            // DuplicateCard8
+            // 
+            this.DuplicateCard8.Location = new System.Drawing.Point(440, 328);
+            this.DuplicateCard8.Name = "DuplicateCard8";
+            this.DuplicateCard8.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard8.TabIndex = 13;
+            this.DuplicateCard8.TabStop = false;
+            // 
+            // Card9
+            // 
+            this.Card9.Location = new System.Drawing.Point(576, 328);
+            this.Card9.Name = "Card9";
+            this.Card9.Size = new System.Drawing.Size(130, 150);
+            this.Card9.TabIndex = 12;
+            this.Card9.TabStop = false;
+            // 
+            // DuplicateCard6
+            // 
+            this.DuplicateCard6.Location = new System.Drawing.Point(712, 172);
+            this.DuplicateCard6.Name = "DuplicateCard6";
+            this.DuplicateCard6.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard6.TabIndex = 11;
+            this.DuplicateCard6.TabStop = false;
+            // 
+            // Card4
+            // 
+            this.Card4.Location = new System.Drawing.Point(32, 172);
+            this.Card4.Name = "Card4";
+            this.Card4.Size = new System.Drawing.Size(130, 150);
+            this.Card4.TabIndex = 10;
+            this.Card4.TabStop = false;
+            // 
+            // DuplicateCard4
+            // 
+            this.DuplicateCard4.Location = new System.Drawing.Point(168, 172);
+            this.DuplicateCard4.Name = "DuplicateCard4";
+            this.DuplicateCard4.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard4.TabIndex = 9;
+            this.DuplicateCard4.TabStop = false;
+            // 
+            // Card5
+            // 
+            this.Card5.Location = new System.Drawing.Point(304, 172);
+            this.Card5.Name = "Card5";
+            this.Card5.Size = new System.Drawing.Size(130, 150);
+            this.Card5.TabIndex = 8;
+            this.Card5.TabStop = false;
+            // 
+            // DuplicateCard5
+            // 
+            this.DuplicateCard5.Location = new System.Drawing.Point(440, 172);
+            this.DuplicateCard5.Name = "DuplicateCard5";
+            this.DuplicateCard5.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard5.TabIndex = 7;
+            this.DuplicateCard5.TabStop = false;
+            // 
+            // Card6
+            // 
+            this.Card6.Location = new System.Drawing.Point(576, 172);
+            this.Card6.Name = "Card6";
+            this.Card6.Size = new System.Drawing.Size(130, 150);
+            this.Card6.TabIndex = 6;
+            this.Card6.TabStop = false;
+            // 
+            // Card2
+            // 
+            this.Card2.Location = new System.Drawing.Point(304, 13);
+            this.Card2.Name = "Card2";
+            this.Card2.Size = new System.Drawing.Size(130, 150);
+            this.Card2.TabIndex = 5;
+            this.Card2.TabStop = false;
+            // 
+            // DuplicateCard2
+            // 
+            this.DuplicateCard2.Location = new System.Drawing.Point(440, 13);
+            this.DuplicateCard2.Name = "DuplicateCard2";
+            this.DuplicateCard2.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard2.TabIndex = 4;
+            this.DuplicateCard2.TabStop = false;
+            // 
+            // Card3
+            // 
+            this.Card3.Location = new System.Drawing.Point(576, 13);
+            this.Card3.Name = "Card3";
+            this.Card3.Size = new System.Drawing.Size(130, 150);
+            this.Card3.TabIndex = 3;
+            this.Card3.TabStop = false;
+            // 
+            // DuplicateCard3
+            // 
+            this.DuplicateCard3.Location = new System.Drawing.Point(712, 13);
+            this.DuplicateCard3.Name = "DuplicateCard3";
+            this.DuplicateCard3.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard3.TabIndex = 2;
+            this.DuplicateCard3.TabStop = false;
+            // 
+            // DuplicateCard11
+            // 
+            this.DuplicateCard11.Location = new System.Drawing.Point(168, 13);
+            this.DuplicateCard11.Name = "DuplicateCard11";
+            this.DuplicateCard11.Size = new System.Drawing.Size(130, 150);
+            this.DuplicateCard11.TabIndex = 1;
+            this.DuplicateCard11.TabStop = false;
+            // 
+            // Card1
+            // 
+            this.Card1.Location = new System.Drawing.Point(32, 13);
+            this.Card1.Name = "Card1";
+            this.Card1.Size = new System.Drawing.Size(130, 150);
+            this.Card1.TabIndex = 0;
+            this.Card1.TabStop = false;
+            // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Font = new System.Drawing.Font("Arial Black", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScoreLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ScoreLabel.Location = new System.Drawing.Point(859, 75);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(140, 48);
+            this.ScoreLabel.TabIndex = 24;
+            this.ScoreLabel.Text = "Score:";
+            this.ScoreLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // ScoreCounter
+            // 
+            this.ScoreCounter.AutoSize = true;
+            this.ScoreCounter.Font = new System.Drawing.Font("Arial Black", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScoreCounter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ScoreCounter.Location = new System.Drawing.Point(1005, 75);
+            this.ScoreCounter.Name = "ScoreCounter";
+            this.ScoreCounter.Size = new System.Drawing.Size(43, 48);
+            this.ScoreCounter.TabIndex = 25;
+            this.ScoreCounter.Text = "0";
+            // 
             // MemoryMatching
             // 
             this.AccessibleName = "GameWindow";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(940, 663);
+            this.ClientSize = new System.Drawing.Size(1073, 663);
             this.Controls.Add(this.CardsHolder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MemoryMatching";
@@ -324,30 +351,31 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.CardsHolder.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Card1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DulicateCard9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Card9)).EndInit();
+            this.CardsHolder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DulicateCard10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DulicateCard11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DulicateCard9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuplicateCard11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Card1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,6 +408,8 @@
         private System.Windows.Forms.PictureBox Card5;
         private System.Windows.Forms.PictureBox DuplicateCard5;
         private System.Windows.Forms.PictureBox Card6;
+        private System.Windows.Forms.Label ScoreLabel;
+        private System.Windows.Forms.Label ScoreCounter;
     }
 }
 
