@@ -18,6 +18,8 @@ namespace MemoryGame
         List<int> X = new List<int>();  // X values of each picturebox
         List<int> Y = new List<int>();  // Y values of each picturebox
         bool again = false; // play again or no
+        PictureBox pendingImage01; // store first flipped card in a variable
+        PictureBox pendingImage02; // store second flipped card in a variable
 
         public GameWindow()
         {
@@ -107,114 +109,604 @@ namespace MemoryGame
         private void Card1_Click(object sender, EventArgs e)
         {
             Card1.Image = Properties.Resources.Card1;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card1;
+            }
+            else if(pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card1;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+           }
         }
 
         private void DupCard1_Click(object sender, EventArgs e)
         {
             DupCard1.Image = Properties.Resources.Card1;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard1;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard1;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void Card2_Click(object sender, EventArgs e)
         {
             Card2.Image = Properties.Resources.Card2;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card2;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card2;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard2_Click(object sender, EventArgs e)
         {
             DupCard2.Image = Properties.Resources.Card2;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard2;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard2;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void Card3_Click(object sender, EventArgs e)
         {
             Card3.Image = Properties.Resources.Card3;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card3;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card3;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard3_Click(object sender, EventArgs e)
         {
             DupCard3.Image = Properties.Resources.Card3;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard3;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard3;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void Card4_Click(object sender, EventArgs e)
         {
             Card4.Image = Properties.Resources.Card4;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card4;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card4;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard4_Click(object sender, EventArgs e)
         {
             DupCard4.Image = Properties.Resources.Card4;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard4;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard4;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card5_Click(object sender, EventArgs e)
         {
             Card5.Image = Properties.Resources.Card5;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card5;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card5;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard5_Click(object sender, EventArgs e)
         {
             DupCard5.Image = Properties.Resources.Card5;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard5;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard5;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card6_Click(object sender, EventArgs e)
         {
             Card6.Image = Properties.Resources.Card6;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card6;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card6;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard6_Click(object sender, EventArgs e)
         {
             DupCard6.Image = Properties.Resources.Card6;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard6;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard6;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card7_Click(object sender, EventArgs e)
         {
             Card7.Image = Properties.Resources.Card7;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card7;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card7;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard7_Click(object sender, EventArgs e)
         {
             DupCard7.Image = Properties.Resources.Card7;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard7;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard7;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card8_Click(object sender, EventArgs e)
         {
             Card8.Image = Properties.Resources.Card8;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card8;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card8;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard8_Click(object sender, EventArgs e)
         {
             DupCard8.Image = Properties.Resources.Card8;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard8;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard8;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card9_Click(object sender, EventArgs e)
         {
             Card9.Image = Properties.Resources.Card9;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card9;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card9;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard9_Click(object sender, EventArgs e)
         {
             DupCard9.Image = Properties.Resources.Card9;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard9;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard9;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card10_Click(object sender, EventArgs e)
         {
             Card10.Image = Properties.Resources.Card10;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card10;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card10;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard10_Click(object sender, EventArgs e)
         {
             DupCard10.Image = Properties.Resources.Card10;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard10;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard10;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card11_Click(object sender, EventArgs e)
         {
             Card11.Image = Properties.Resources.Card11;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card11;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card11;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard11_Click(object sender, EventArgs e)
         {
             DupCard11.Image = Properties.Resources.Card11;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard11;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard11;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
         private void Card12_Click(object sender, EventArgs e)
         {
             Card12.Image = Properties.Resources.Card12;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = Card12;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = Card12;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
 
         private void DupCard12_Click(object sender, EventArgs e)
         {
             DupCard12.Image = Properties.Resources.Card12;
+            if (pendingImage01 == null)
+            {
+                pendingImage01 = DupCard12;
+            }
+            else if (pendingImage01 != null && pendingImage02 == null)
+            {
+                pendingImage02 = DupCard12;
+            }
+            if (pendingImage01 != null && pendingImage02 != null)
+            {
+                if (pendingImage01.Tag == pendingImage02.Tag)
+                {
+                    pendingImage01 = null;
+                    pendingImage02 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+            }
         }
+
         #endregion
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            timer3.Stop();
+            pendingImage01.Image = Properties.Resources.Cover;
+            pendingImage02.Image = Properties.Resources.Cover;
+            pendingImage01 = null;
+            pendingImage02 = null;
+        }
     }
 }
