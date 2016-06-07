@@ -18,3 +18,12 @@ C:\Users\ihalkov\Desktop\MemoryGame1\MemoryGame\obj\Debug\MemoryGame.csprojResol
 C:\Users\ihalkov\Desktop\MemoryGame1\MemoryGame\obj\Debug\MemoryGame.GameWindow.resources
 C:\Users\ihalkov\Desktop\MemoryGame1\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
 C:\Users\ihalkov\Desktop\MemoryGame1\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.GameWindow.resources
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+C:\Users\mary\Desktop\project C#\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
