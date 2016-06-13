@@ -15,8 +15,9 @@ namespace MemoryGame
         // variables
         int score = 0;  // our scores
         Random Location = new Random(); // selects random value from X and Y lists and assign a new location for each card
-        List<int> X = new List<int>();  // X values of each picturebox
-        List<int> Y = new List<int>();  // Y values of each picturebox
+                                        //List<int> X = new List<int>();  // X values of each picturebox
+                                        //List<int> Y = new List<int>();  // Y values of each picturebox
+        List<Point> points = new List<Point>();
         bool again = false; // play again or no
         PictureBox pendingImage01; // store first flipped card in a variable
         PictureBox pendingImage02; // store second flipped card in a variable
@@ -29,10 +30,22 @@ namespace MemoryGame
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            labelCountDown.Text = "5";
             foreach (PictureBox picture in CardsHolder.Controls)
             {
                 picture.Enabled = false;
+                points.Add(picture.Location);
             }
+
+            foreach (PictureBox picture in CardsHolder.Controls)
+            {
+                int next = Location.Next(points.Count);
+                Point p = points[next];
+                picture.Location = p;
+                points.Remove(p);
+
+            }
+
             timer1.Start();
             timerCountDown.Start();
             Card1.Image = Properties.Resources.Card1;
@@ -123,6 +136,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card1.Enabled = false;
+                    DupCard1.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -148,6 +164,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card1.Enabled = false;
+                    DupCard1.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -173,6 +192,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card2.Enabled = false;
+                    DupCard2.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -198,6 +220,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card2.Enabled = false;
+                    DupCard2.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -223,6 +248,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card3.Enabled = false;
+                    DupCard3.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -248,6 +276,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card3.Enabled = false;
+                    DupCard3.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -273,6 +304,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card4.Enabled = false;
+                    DupCard4.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -298,6 +332,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card4.Enabled = false;
+                    DupCard4.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -322,6 +359,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card5.Enabled = false;
+                    DupCard5.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -347,6 +387,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card5.Enabled = false;
+                    DupCard5.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -371,6 +414,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card6.Enabled = false;
+                    DupCard6.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -396,6 +442,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card6.Enabled = false;
+                    DupCard6.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -420,6 +469,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card7.Enabled = false;
+                    DupCard7.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -445,6 +497,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card7.Enabled = false;
+                    DupCard7.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -469,6 +524,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card8.Enabled = false;
+                    DupCard8.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -494,6 +552,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card8.Enabled = false;
+                    DupCard8.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -518,6 +579,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card9.Enabled = false;
+                    DupCard9.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -543,6 +607,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card9.Enabled = false;
+                    DupCard9.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -567,6 +634,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card10.Enabled = false;
+                    DupCard10.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -592,6 +662,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card10.Enabled = false;
+                    DupCard10.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -616,6 +689,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card11.Enabled = false;
+                    DupCard11.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -641,6 +717,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card11.Enabled = false;
+                    DupCard11.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -665,6 +744,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card12.Enabled = false;
+                    DupCard12.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -690,6 +772,9 @@ namespace MemoryGame
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
+                    Card12.Enabled = false;
+                    DupCard12.Enabled = false;
+                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
@@ -702,11 +787,18 @@ namespace MemoryGame
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+            label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) - 10);
             timer3.Stop();
             pendingImage01.Image = Properties.Resources.Cover;
             pendingImage02.Image = Properties.Resources.Cover;
             pendingImage01 = null;
             pendingImage02 = null;
+        }
+
+        // PlayAgain button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1_Load(sender, e);
         }
     }
 }

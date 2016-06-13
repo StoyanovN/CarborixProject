@@ -36,3 +36,12 @@ C:\Users\NRG\Documents\GitHub\CarborixProject\MemoryGame\MemoryGame\obj\Debug\Me
 C:\Users\NRG\Documents\GitHub\CarborixProject\MemoryGame\MemoryGame\obj\Debug\MemoryGame.GameWindow.resources
 C:\Users\NRG\Documents\GitHub\CarborixProject\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
 C:\Users\NRG\Documents\GitHub\CarborixProject\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.GameWindow.resources
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache

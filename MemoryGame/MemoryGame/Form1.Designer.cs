@@ -62,6 +62,7 @@
             this.labelCountDown = new System.Windows.Forms.Label();
             this.timerCountDown = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.CardsHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Card1)).BeginInit();
@@ -417,6 +418,17 @@
             this.timer3.Interval = 500;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(771, 111);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 64);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "Play Again";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GameWindow
             // 
             this.AccessibleName = "";
@@ -424,6 +436,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(886, 663);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelCountDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -499,6 +512,7 @@
         private System.Windows.Forms.Label labelCountDown;
         private System.Windows.Forms.Timer timerCountDown;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Button button1;
     }
 }
 
