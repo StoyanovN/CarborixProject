@@ -45,3 +45,12 @@ C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\Mem
 C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.GameWindow.resources
 C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
 C:\Users\cepacha\Desktop\carborix- project\CarborixProject-master\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.GameWindow.resources
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+C:\Users\cepacha\Desktop\New folder\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache

@@ -799,6 +799,7 @@ namespace MemoryGame
         private void button1_Click(object sender, EventArgs e)
         {
             Form1_Load(sender, e);
+            label2.Text = Convert.ToString(0);
         }
     }
 }
