@@ -11,15 +11,26 @@
     public partial class GameWindow : Form
     {
         // variables
+        //int score = 0;  // our scores
         Random location = new Random(); // selects random value from X and Y lists and assign a new location for each card
+        //List<int> X = new List<int>();  // X values of each picturebox
+        //List<int> Y = new List<int>();  // Y values of each picturebox
         List<Point> points = new List<Point>();
+        //bool again = false; // Property in Game class
         PictureBox pendingImage01; // store first flipped card in a variable
         PictureBox pendingImage02; // store second flipped card in a variable
+        private string firstPendingCardName;
+        private string secondPendingCardName;
 
         public GameWindow()
         {
             InitializeComponent();
+            //IReader reader = new GUIReader();
+            //IWriter writer = new GUIWriter(this);
+            //IGameEngine engine = new GameEngine(reader, writer);
+            //engine.Run();
         }
+
 
         public void GameWindowLoad(object sender = null, EventArgs e = null)
         {
@@ -67,9 +78,11 @@
             DupCard12.Image = Properties.Resources.Card12;
         }
 
+
         /// <summary>
         ///close cards
         /// </summary>
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -103,23 +116,27 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card1;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card1;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
-                    Card1.Enabled = false;
-                    DupCard1.Enabled = false;
+
                     label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -131,14 +148,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard1;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard1;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -148,6 +168,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -159,14 +181,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card2;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card2;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -176,6 +201,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -187,14 +214,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard2;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard2;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -204,6 +234,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -215,14 +247,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card3;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card3;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -232,6 +267,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -243,14 +280,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard3;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard3;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -260,6 +300,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -271,14 +313,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card4;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card4;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -288,6 +333,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -299,14 +346,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard4;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard4;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -316,6 +366,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -326,14 +378,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card5;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card5;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -343,6 +398,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -354,14 +411,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard5;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard5;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -371,6 +431,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -381,14 +443,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card6;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card6;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -398,6 +463,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -409,14 +476,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard6;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard6;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -426,6 +496,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -436,14 +508,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card7;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card7;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -453,6 +528,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -464,14 +541,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard7;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard7;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -481,6 +561,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -491,14 +573,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card8;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card8;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -508,6 +593,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -519,14 +606,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard8;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard8;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -536,6 +626,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -546,14 +638,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card9;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card9;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -563,6 +658,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -574,14 +671,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard9;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard9;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -591,6 +691,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -601,14 +703,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card10;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card10;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -618,6 +723,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -629,14 +736,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard10;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard10;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -646,6 +756,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -656,14 +768,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card11;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card11;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -673,6 +788,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -684,14 +801,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard11;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard11;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -701,6 +821,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -711,14 +833,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = Card12;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card12;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -728,6 +853,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -739,14 +866,17 @@
             if (pendingImage01 == null)
             {
                 pendingImage01 = DupCard12;
+                pendingImage01.Enabled = false;
             }
             else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = DupCard12;
+                pendingImage02.Enabled = false;
             }
             if (pendingImage01 != null && pendingImage02 != null)
             {
-                if (pendingImage01.Tag == pendingImage02.Tag)
+                if (pendingImage01.Tag == pendingImage02.Tag &&
+                    pendingImage01.Name != pendingImage02.Name)
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
@@ -756,6 +886,8 @@
                 }
                 else
                 {
+                    pendingImage01.Enabled = true;
+                    pendingImage02.Enabled = true;
                     timer3.Start();
                 }
             }
@@ -767,7 +899,6 @@
         /// </summary>
         private void timer3_Tick(object sender, EventArgs e)
         {
-            label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) - 10);
             timer3.Stop();
             pendingImage01.Image = Properties.Resources.Cover;
             pendingImage02.Image = Properties.Resources.Cover;

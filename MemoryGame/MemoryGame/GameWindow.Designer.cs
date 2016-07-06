@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.CardsHolder = new System.Windows.Forms.Panel();
-
-            
             this.Card1 = new System.Windows.Forms.PictureBox();
             this.DupCard12 = new System.Windows.Forms.PictureBox();
             this.Card12 = new System.Windows.Forms.PictureBox();
@@ -58,7 +56,6 @@
             this.DupCard2 = new System.Windows.Forms.PictureBox();
             this.Card2 = new System.Windows.Forms.PictureBox();
             this.DupCard1 = new System.Windows.Forms.PictureBox();
-
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -125,7 +122,6 @@
             this.CardsHolder.Name = "CardsHolder";
             this.CardsHolder.Size = new System.Drawing.Size(735, 639);
             this.CardsHolder.TabIndex = 0;
-           // this.CardsHolder.Paint += new System.Windows.Forms.PaintEventHandler(this.CardsHolder_Paint);
             // 
             // Card1
             // 
@@ -416,7 +412,7 @@
             // 
             // timer3
             // 
-            this.timer3.Interval = 500;
+            this.timer3.Interval = 250;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // button1
@@ -447,7 +443,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory-Matching Game";
-            //this.Load += new System.EventHandler(this.GameWindowLoad);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.CardsHolder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Card1)).EndInit();
