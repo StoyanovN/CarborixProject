@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.CardsHolder = new System.Windows.Forms.Panel();
+
+            
             this.Card1 = new System.Windows.Forms.PictureBox();
             this.DupCard12 = new System.Windows.Forms.PictureBox();
             this.Card12 = new System.Windows.Forms.PictureBox();
@@ -56,6 +58,7 @@
             this.DupCard2 = new System.Windows.Forms.PictureBox();
             this.Card2 = new System.Windows.Forms.PictureBox();
             this.DupCard1 = new System.Windows.Forms.PictureBox();
+
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -122,7 +125,7 @@
             this.CardsHolder.Name = "CardsHolder";
             this.CardsHolder.Size = new System.Drawing.Size(735, 639);
             this.CardsHolder.TabIndex = 0;
-            this.CardsHolder.Paint += new System.Windows.Forms.PaintEventHandler(this.CardsHolder_Paint);
+           // this.CardsHolder.Paint += new System.Windows.Forms.PaintEventHandler(this.CardsHolder_Paint);
             // 
             // Card1
             // 
@@ -375,7 +378,6 @@
             this.label1.Size = new System.Drawing.Size(65, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Score:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -387,7 +389,6 @@
             this.label2.Size = new System.Drawing.Size(22, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "0";
-            this.label2.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // timer1
             // 
@@ -446,7 +447,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memory-Matching Game";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            //this.Load += new System.EventHandler(this.GameWindowLoad);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.CardsHolder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Card1)).EndInit();
@@ -480,39 +481,39 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Panel CardsHolder;
-        private System.Windows.Forms.PictureBox DupCard12;
-        private System.Windows.Forms.PictureBox Card12;
-        private System.Windows.Forms.PictureBox DupCard11;
-        private System.Windows.Forms.PictureBox Card11;
-        private System.Windows.Forms.PictureBox DupCard10;
-        private System.Windows.Forms.PictureBox Card10;
-        private System.Windows.Forms.PictureBox DupCard9;
-        private System.Windows.Forms.PictureBox Card9;
-        private System.Windows.Forms.PictureBox DupCard8;
-        private System.Windows.Forms.PictureBox Card8;
-        private System.Windows.Forms.PictureBox DupCard7;
-        private System.Windows.Forms.PictureBox Card7;
-        private System.Windows.Forms.PictureBox DupCard6;
-        private System.Windows.Forms.PictureBox Card6;
-        private System.Windows.Forms.PictureBox DupCard5;
-        private System.Windows.Forms.PictureBox Card5;
-        private System.Windows.Forms.PictureBox DupCard4;
-        private System.Windows.Forms.PictureBox Card4;
-        private System.Windows.Forms.PictureBox DupCard3;
-        private System.Windows.Forms.PictureBox Card3;
-        private System.Windows.Forms.PictureBox DupCard2;
-        private System.Windows.Forms.PictureBox Card2;
-        private System.Windows.Forms.PictureBox DupCard1;
-        private System.Windows.Forms.PictureBox Card1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label labelCountDown;
-        private System.Windows.Forms.Timer timerCountDown;
-        private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.BindingSource bindingSource1;
+        public System.Windows.Forms.Panel CardsHolder;
+        public System.Windows.Forms.PictureBox DupCard12;
+        public System.Windows.Forms.PictureBox Card12;
+        public System.Windows.Forms.PictureBox DupCard11;
+        public System.Windows.Forms.PictureBox Card11;
+        public System.Windows.Forms.PictureBox DupCard10;
+        public System.Windows.Forms.PictureBox Card10;
+        public System.Windows.Forms.PictureBox DupCard9;
+        public System.Windows.Forms.PictureBox Card9;
+        public System.Windows.Forms.PictureBox DupCard8;
+        public System.Windows.Forms.PictureBox Card8;
+        public System.Windows.Forms.PictureBox DupCard7;
+        public System.Windows.Forms.PictureBox Card7;
+        public System.Windows.Forms.PictureBox DupCard6;
+        public System.Windows.Forms.PictureBox Card6;
+        public System.Windows.Forms.PictureBox DupCard5;
+        public System.Windows.Forms.PictureBox Card5;
+        public System.Windows.Forms.PictureBox DupCard4;
+        public System.Windows.Forms.PictureBox Card4;
+        public System.Windows.Forms.PictureBox DupCard3;
+        public System.Windows.Forms.PictureBox Card3;
+        public System.Windows.Forms.PictureBox DupCard2;
+        public System.Windows.Forms.PictureBox Card2;
+        public System.Windows.Forms.PictureBox DupCard1;
+        public System.Windows.Forms.PictureBox Card1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Label labelCountDown;
+        public System.Windows.Forms.Timer timerCountDown;
+        public System.Windows.Forms.Timer timer3;
+        public System.Windows.Forms.Button button1;
     }
 }
 

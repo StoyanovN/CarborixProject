@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace MemoryGame
+﻿namespace MemoryGame
 {
+    using MemoryGame.Engines;
+    using MemoryGame.Interfaces;
+    using System;
+    using System.Collections.Generic;
+    using System.Drawing;
+    using System.Windows.Forms;
+    using UI;
+
     public partial class GameWindow : Form
     {
         // variables
-        int score = 0;  // our scores
-        Random Location = new Random(); // selects random value from X and Y lists and assign a new location for each card
-                                        //List<int> X = new List<int>();  // X values of each picturebox
-                                        //List<int> Y = new List<int>();  // Y values of each picturebox
+        Random location = new Random(); // selects random value from X and Y lists and assign a new location for each card
         List<Point> points = new List<Point>();
-        bool again = false; // play again or no
         PictureBox pendingImage01; // store first flipped card in a variable
         PictureBox pendingImage02; // store second flipped card in a variable
 
@@ -27,8 +21,7 @@ namespace MemoryGame
             InitializeComponent();
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
+        public void GameWindowLoad(object sender = null, EventArgs e = null)
         {
             labelCountDown.Text = "5";
             foreach (PictureBox picture in CardsHolder.Controls)
@@ -39,7 +32,7 @@ namespace MemoryGame
 
             foreach (PictureBox picture in CardsHolder.Controls)
             {
-                int next = Location.Next(points.Count);
+                int next = location.Next(points.Count);
                 Point p = points[next];
                 picture.Location = p;
                 points.Remove(p);
@@ -72,25 +65,11 @@ namespace MemoryGame
             DupCard11.Image = Properties.Resources.Card11;
             Card12.Image = Properties.Resources.Card12;
             DupCard12.Image = Properties.Resources.Card12;
-
-
-
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
-        private void CardsHolder_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        ///close cards
+        /// </summary>
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -102,11 +81,9 @@ namespace MemoryGame
             }
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// counts time (for 5 seconds) at the beggining of the game, when cards are faced
+        /// </summary>
         private void timerCountDown_Tick(object sender, EventArgs e)
         {
 
@@ -118,6 +95,7 @@ namespace MemoryGame
                 timerCountDown.Stop();
             }
         }
+
         #region Cards
         private void Card1_Click(object sender, EventArgs e)
         {
@@ -126,7 +104,7 @@ namespace MemoryGame
             {
                 pendingImage01 = Card1;
             }
-            else if(pendingImage01 != null && pendingImage02 == null)
+            else if (pendingImage01 != null && pendingImage02 == null)
             {
                 pendingImage02 = Card1;
             }
@@ -144,7 +122,7 @@ namespace MemoryGame
                 {
                     timer3.Start();
                 }
-           }
+            }
         }
 
         private void DupCard1_Click(object sender, EventArgs e)
@@ -784,7 +762,9 @@ namespace MemoryGame
         }
 
         #endregion
-
+        /// <summary>
+        /// close cards when they do not match
+        /// </summary>
         private void timer3_Tick(object sender, EventArgs e)
         {
             label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) - 10);
@@ -798,7 +778,7 @@ namespace MemoryGame
         // PlayAgain button
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1_Load(sender, e);
+            GameWindowLoad(sender, e);
             label2.Text = Convert.ToString(0);
         }
     }
