@@ -1,12 +1,9 @@
 ﻿namespace MemoryGame.UI
 {
-    using MemoryGame.Interfaces;
-    using MemoryGame.Properties;
+    using Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Drawing;
-    using System.Windows.Forms;
-
 
     public class GUIWriter : IWriter
     {

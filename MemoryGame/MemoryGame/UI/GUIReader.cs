@@ -1,6 +1,6 @@
 ﻿namespace MemoryGame.UI
 {
-    using MemoryGame.Interfaces;
+    using Interfaces;
     /// <summary>
     /// Responsible for user interaction with GUI
     /// </summary>

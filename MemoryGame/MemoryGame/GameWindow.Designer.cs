@@ -122,6 +122,7 @@
             this.CardsHolder.Name = "CardsHolder";
             this.CardsHolder.Size = new System.Drawing.Size(735, 639);
             this.CardsHolder.TabIndex = 0;
+            this.CardsHolder.Paint += new System.Windows.Forms.PaintEventHandler(this.CardsHolder_Paint);
             // 
             // Card1
             // 
@@ -403,6 +404,7 @@
             this.labelCountDown.TabIndex = 2;
             this.labelCountDown.Text = "5";
             this.labelCountDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCountDown.Click += new System.EventHandler(this.labelCountDown_Click);
             // 
             // timerCountDown
             // 

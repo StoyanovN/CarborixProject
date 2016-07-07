@@ -1,6 +1,6 @@
 ﻿namespace MemoryGame.Engines
 {
-    using MemoryGame.Interfaces;
+    using Interfaces;
     using Models;
 
     public class GameEngine : IGameEngine

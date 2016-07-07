@@ -912,5 +912,15 @@
             GameWindowLoad(sender, e);
             label2.Text = Convert.ToString(0);
         }
+
+        private void labelCountDown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CardsHolder_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

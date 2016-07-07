@@ -1,6 +1,6 @@
 ﻿namespace MemoryGame.Models
 {
-    using MemoryGame.Interfaces;
+    using Interfaces;
 
     public class Game : IGame
     {
