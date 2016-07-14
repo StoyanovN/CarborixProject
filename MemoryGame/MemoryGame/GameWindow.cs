@@ -35,6 +35,7 @@
         public void GameWindowLoad(object sender = null, EventArgs e = null)
         {
             labelCountDown.Text = "5";
+
             foreach (PictureBox picture in CardsHolder.Controls)
             {
                 picture.Enabled = false;
@@ -47,11 +48,10 @@
                 Point p = points[next];
                 picture.Location = p;
                 points.Remove(p);
-
             }
 
             timer1.Start();
-            timerCountDown.Start();
+
             Card1.Image = Properties.Resources.Card1;
             DupCard1.Image = Properties.Resources.Card1;
             Card2.Image = Properties.Resources.Card2;

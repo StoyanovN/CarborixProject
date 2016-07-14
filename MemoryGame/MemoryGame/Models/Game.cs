@@ -5,11 +5,12 @@
     public class Game : IGame
     {
         private const int NumberOfCards = 24;
+        private const int TimeBeforTurning = 5;
 
         public Game()
         {
             this.PlayAgain = false;
-            this.CountDown = 5;
+            this.CountDown = TimeBeforTurning;
             this.Cards = new Card[NumberOfCards];
         }
 

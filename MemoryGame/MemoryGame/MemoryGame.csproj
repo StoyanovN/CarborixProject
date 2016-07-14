@@ -53,9 +53,14 @@
     <Compile Include="GameWindow.Designer.cs">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\CardInterfaces\ICard.cs" />
+    <Compile Include="Interfaces\CardInterfaces\ILocation.cs" />
+    <Compile Include="Interfaces\CardInterfaces\ISize.cs" />
     <Compile Include="Interfaces\IGame.cs" />
     <Compile Include="Interfaces\IGameEngine.cs" />
+    <Compile Include="Interfaces\CardInterfaces\IImage.cs" />
     <Compile Include="Interfaces\IReader.cs" />
+    <Compile Include="Interfaces\CardInterfaces\IVisible.cs" />
     <Compile Include="Interfaces\IWriter.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Game.cs" />

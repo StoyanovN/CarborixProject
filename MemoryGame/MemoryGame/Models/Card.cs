@@ -1,6 +1,8 @@
 ﻿namespace MemoryGame.Models
 {
-    public class Card
+    using Interfaces.CardsInterfaces;
+
+    public class Card : ICard
     {
         public Card()
         {
@@ -27,7 +29,7 @@
         public int CardHeigth { get; set; }
 
         public string CardFrontImage { get; set; }
-        public string CardBackImage { get; private set; }
+        public string CardBackImage { get; set; }
 
         //this.DupCard1.TabIndex = 26;
         //this.DupCard1.TabStop = false;
