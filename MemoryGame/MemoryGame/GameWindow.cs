@@ -2,10 +2,12 @@
 {
     using MemoryGame.Engines;
     using MemoryGame.Interfaces;
+    using Properties;
     using System;
     using System.Collections.Generic;
     using System.Drawing;
     using System.Windows.Forms;
+    using System.Diagnostics;
     using UI;
 
     public partial class GameWindow : Form
@@ -51,6 +53,7 @@
             }
 
             timer1.Start();
+            timerCountDown.Start();
 
             Card1.Image = Properties.Resources.Card1;
             DupCard1.Image = Properties.Resources.Card1;
@@ -110,51 +113,41 @@
         }
 
         #region Cards
-        private void Card1_Click(object sender, EventArgs e)
-        {
-            Card1.Image = Properties.Resources.Card1;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card1;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card1;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
 
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
+        private void Card_Click(object sender, EventArgs e)
+        {
+            PictureBox currentPicture = (PictureBox)sender;
+            string nameCurrentPicture = currentPicture.Name;
+            ExecuteClick(nameCurrentPicture);
         }
 
-        private void DupCard1_Click(object sender, EventArgs e)
+        
+
+        private void ExecuteClick(string cardCalledClickMethod)
         {
-            DupCard1.Image = Properties.Resources.Card1;
+            string cardNumber = GetCardNumber(cardCalledClickMethod);
+            string card = "Card" + cardNumber;
+            string dublicatedCard = "DupCard" + cardNumber;
+            
+            PictureBox currentPicture = (PictureBox)this.CardsHolder.Controls[cardCalledClickMethod];
+            object O = Resources.ResourceManager.GetObject(card);
+            currentPicture.Image = (Image)O;
+
+            PictureBox pictureCard = (PictureBox)this.CardsHolder.Controls[card];
+            PictureBox pictureCardDup = (PictureBox)this.CardsHolder.Controls[dublicatedCard];
+            
             if (pendingImage01 == null)
             {
-                pendingImage01 = DupCard1;
+                pendingImage01 = currentPicture;
                 pendingImage01.Enabled = false;
             }
+
             else if (pendingImage01 != null && pendingImage02 == null)
             {
-                pendingImage02 = DupCard1;
+                pendingImage02 = currentPicture;
                 pendingImage02.Enabled = false;
             }
+
             if (pendingImage01 != null && pendingImage02 != null)
             {
                 if (pendingImage01.Tag == pendingImage02.Tag &&
@@ -162,10 +155,11 @@
                 {
                     pendingImage01 = null;
                     pendingImage02 = null;
-                    Card1.Enabled = false;
-                    DupCard1.Enabled = false;
+                    pictureCard.Enabled = false;
+                    pictureCardDup.Enabled = false;
                     label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
                 }
+
                 else
                 {
                     pendingImage01.Enabled = true;
@@ -175,724 +169,17 @@
             }
         }
 
-        private void Card2_Click(object sender, EventArgs e)
+        private string GetCardNumber(string cardCalledClickMethod)
         {
-            Card2.Image = Properties.Resources.Card2;
-            if (pendingImage01 == null)
+            string lastTwoDigits = cardCalledClickMethod.Substring(cardCalledClickMethod.Length - 2);
+            if (char.IsLetter(lastTwoDigits[0]))
             {
-                pendingImage01 = Card2;
-                pendingImage01.Enabled = false;
+                return lastTwoDigits[1].ToString();
             }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card2;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card2.Enabled = false;
-                    DupCard2.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
 
-        private void DupCard2_Click(object sender, EventArgs e)
-        {
-            DupCard2.Image = Properties.Resources.Card2;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard2;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard2;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card2.Enabled = false;
-                    DupCard2.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
+            return lastTwoDigits;
         }
-
-        private void Card3_Click(object sender, EventArgs e)
-        {
-            Card3.Image = Properties.Resources.Card3;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card3;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card3;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card3.Enabled = false;
-                    DupCard3.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard3_Click(object sender, EventArgs e)
-        {
-            DupCard3.Image = Properties.Resources.Card3;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard3;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard3;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card3.Enabled = false;
-                    DupCard3.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void Card4_Click(object sender, EventArgs e)
-        {
-            Card4.Image = Properties.Resources.Card4;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card4;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card4;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card4.Enabled = false;
-                    DupCard4.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard4_Click(object sender, EventArgs e)
-        {
-            DupCard4.Image = Properties.Resources.Card4;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard4;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard4;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card4.Enabled = false;
-                    DupCard4.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card5_Click(object sender, EventArgs e)
-        {
-            Card5.Image = Properties.Resources.Card5;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card5;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card5;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card5.Enabled = false;
-                    DupCard5.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard5_Click(object sender, EventArgs e)
-        {
-            DupCard5.Image = Properties.Resources.Card5;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard5;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard5;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card5.Enabled = false;
-                    DupCard5.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card6_Click(object sender, EventArgs e)
-        {
-            Card6.Image = Properties.Resources.Card6;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card6;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card6;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card6.Enabled = false;
-                    DupCard6.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard6_Click(object sender, EventArgs e)
-        {
-            DupCard6.Image = Properties.Resources.Card6;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard6;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard6;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card6.Enabled = false;
-                    DupCard6.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card7_Click(object sender, EventArgs e)
-        {
-            Card7.Image = Properties.Resources.Card7;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card7;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card7;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card7.Enabled = false;
-                    DupCard7.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard7_Click(object sender, EventArgs e)
-        {
-            DupCard7.Image = Properties.Resources.Card7;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard7;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard7;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card7.Enabled = false;
-                    DupCard7.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card8_Click(object sender, EventArgs e)
-        {
-            Card8.Image = Properties.Resources.Card8;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card8;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card8;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card8.Enabled = false;
-                    DupCard8.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard8_Click(object sender, EventArgs e)
-        {
-            DupCard8.Image = Properties.Resources.Card8;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard8;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard8;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card8.Enabled = false;
-                    DupCard8.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card9_Click(object sender, EventArgs e)
-        {
-            Card9.Image = Properties.Resources.Card9;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card9;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card9;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card9.Enabled = false;
-                    DupCard9.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard9_Click(object sender, EventArgs e)
-        {
-            DupCard9.Image = Properties.Resources.Card9;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard9;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard9;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card9.Enabled = false;
-                    DupCard9.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card10_Click(object sender, EventArgs e)
-        {
-            Card10.Image = Properties.Resources.Card10;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card10;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card10;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card10.Enabled = false;
-                    DupCard10.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard10_Click(object sender, EventArgs e)
-        {
-            DupCard10.Image = Properties.Resources.Card10;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard10;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard10;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card10.Enabled = false;
-                    DupCard10.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card11_Click(object sender, EventArgs e)
-        {
-            Card11.Image = Properties.Resources.Card11;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card11;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card11;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card11.Enabled = false;
-                    DupCard11.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard11_Click(object sender, EventArgs e)
-        {
-            DupCard11.Image = Properties.Resources.Card11;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard11;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard11;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card11.Enabled = false;
-                    DupCard11.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-        private void Card12_Click(object sender, EventArgs e)
-        {
-            Card12.Image = Properties.Resources.Card12;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = Card12;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = Card12;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card12.Enabled = false;
-                    DupCard12.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
-        private void DupCard12_Click(object sender, EventArgs e)
-        {
-            DupCard12.Image = Properties.Resources.Card12;
-            if (pendingImage01 == null)
-            {
-                pendingImage01 = DupCard12;
-                pendingImage01.Enabled = false;
-            }
-            else if (pendingImage01 != null && pendingImage02 == null)
-            {
-                pendingImage02 = DupCard12;
-                pendingImage02.Enabled = false;
-            }
-            if (pendingImage01 != null && pendingImage02 != null)
-            {
-                if (pendingImage01.Tag == pendingImage02.Tag &&
-                    pendingImage01.Name != pendingImage02.Name)
-                {
-                    pendingImage01 = null;
-                    pendingImage02 = null;
-                    Card12.Enabled = false;
-                    DupCard12.Enabled = false;
-                    label2.Text = Convert.ToString(Convert.ToInt32(label2.Text) + 10);
-                }
-                else
-                {
-                    pendingImage01.Enabled = true;
-                    pendingImage02.Enabled = true;
-                    timer3.Start();
-                }
-            }
-        }
-
+        
         #endregion
         /// <summary>
         /// close cards when they do not match
@@ -912,10 +199,8 @@
             GameWindowLoad(sender, e);
             label2.Text = Convert.ToString(0);
         }
-
         private void labelCountDown_Click(object sender, EventArgs e)
         {
-
         }
 
         private void CardsHolder_Paint(object sender, PaintEventArgs e)

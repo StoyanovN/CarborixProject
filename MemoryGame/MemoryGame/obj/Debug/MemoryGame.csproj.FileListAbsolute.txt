@@ -7,3 +7,12 @@ C:\Users\User-17.10.2015\Desktop\CarborixProject\MemoryGame\MemoryGame\obj\Debug
 C:\Users\User-17.10.2015\Desktop\CarborixProject\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
 C:\Users\User-17.10.2015\Desktop\CarborixProject\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
 C:\Users\User-17.10.2015\Desktop\CarborixProject\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csprojResolveAssemblyReference.cache
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.GameWindow.resources
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+C:\Users\mary\Desktop\Carbo15.07\trunk\MemoryGame\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.Cache
