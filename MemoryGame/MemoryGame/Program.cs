@@ -11,15 +11,13 @@
         [STAThread]
         public static void Main()
         {
+            /*Application.Run(new GameWindow());
+            */
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new GameWindow());
-            GameWindow playGround = new GameWindow();
-            IWriter writer = new GUIWriter(playGround);
-            IReader reader = new GUIReader();
-            IGameEngine gameEngine = new GameEngine(reader, writer);
-            gameEngine.Run();
-
+            frmMenu menu = new frmMenu();
+            menu.ShowDialog();
+            
         }
     }
 }
