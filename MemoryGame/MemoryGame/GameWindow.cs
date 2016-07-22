@@ -24,15 +24,18 @@
         private string firstPendingCardName;
         private string secondPendingCardName;
 
-        public GameWindow()
+        private IGame game;
+
+        public GameWindow(IGame game)
         {
             InitializeComponent();
+            this.game = game;
             //IReader reader = new GUIReader();
             //IWriter writer = new GUIWriter(this);
             //IGameEngine engine = new GameEngine(reader, writer);
             //engine.Run();
         }
-
+        
 
         public void GameWindowLoad(object sender = null, EventArgs e = null)
         {
@@ -210,6 +213,7 @@
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
+            this.game.GameStage = Enums.GameStage.Menu;
             this.Close();
         }
     }

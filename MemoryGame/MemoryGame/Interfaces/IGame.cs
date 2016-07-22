@@ -1,11 +1,12 @@
 ﻿namespace MemoryGame.Interfaces
 {
+    using MemoryGame.Enums;
+
     /// <summary>
     /// Responsible for holding games properties
     /// </summary>
     public interface IGame
     {
-        //Check if needed - game stage??? characteristic
-
+        GameStage GameStage { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace MemoryGame.Models
 {
+    using Enums;
     using Interfaces;
 
     public class Game : IGame
@@ -12,7 +13,10 @@
             this.PlayAgain = false;
             this.CountDown = TimeBeforTurning;
             this.Cards = new Card[NumberOfCards];
+            this.GameStage = GameStage.Menu;
         }
+
+        public GameStage GameStage { get; set; }
 
         public bool PlayAgain { get; set; }
 

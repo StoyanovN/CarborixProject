@@ -5,7 +5,7 @@
     using UI;
     using System;
     using System.Windows.Forms;
-
+    using Models;
     public static class Program
     {
         [STAThread]
@@ -15,8 +15,16 @@
             */
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmMenu menu = new frmMenu();
-            menu.ShowDialog();
+
+            IGame game = new Game();
+            IWriter writer = new GUIWriter();
+            IReader reader = new GUIReader();
+            IGameEngine gameEngine = new GameEngine(reader, writer, game);
+            gameEngine.Run();
+
+
+            //frmMenu menu = new frmMenu();
+            //menu.ShowDialog();
             
         }
     }

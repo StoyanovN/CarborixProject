@@ -21,19 +21,23 @@ namespace MemoryGame
     using System.Windows.Forms;
     public partial class frmMenu : Form
     {
+        private IGame game;
 
-        public frmMenu()
+        public frmMenu(IGame game)
         {
+            this.game = game;
             InitializeComponent();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            GameWindow playGround = new GameWindow();
-            IWriter writer = new GUIWriter(playGround);
-            IReader reader = new GUIReader();
-            IGameEngine gameEngine = new GameEngine(reader, writer);
-            gameEngine.Run();
+            this.game.GameStage = Enums.GameStage.Game;
+            this.Close();
+            //GameWindow playGround = new GameWindow();
+            //IWriter writer = new GUIWriter(playGround);
+            //IReader reader = new GUIReader();
+            //IGameEngine gameEngine = new GameEngine(reader, writer);
+            //gameEngine.Run();
         }
 
         private void btnHighScore_Click(object sender, EventArgs e)
@@ -43,6 +47,7 @@ namespace MemoryGame
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
+            this.game.GameStage = Enums.GameStage.End;
             this.Close();
         }
 

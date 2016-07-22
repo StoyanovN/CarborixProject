@@ -4,28 +4,37 @@
     using System;
     using System.Collections.Generic;
     using System.Drawing;
-
+    using System.Windows.Forms;
     public class GUIWriter : IWriter
     {
-        private readonly GameWindow gameWindow;
+        //private readonly GameWindow gameWindow;
+        //private readonly Form formWindow;
         private readonly Random location;
 
-        public GUIWriter(GameWindow gameWindow)
+        //public GUIWriter(GameWindow gameWindow)
+        //{
+        //    this.gameWindow = gameWindow;
+        //    this.location = new Random();
+        //}
+
+        public GUIWriter()
         {
-            this.gameWindow = gameWindow;
+            //this.formWindow = formWindow;
             this.location = new Random();
         }
         public List<Point> points = new List<Point>();
         
-        public void DrowGameWindow()
+        public void DrowGameWindow(IGame game)
         {
-            this.gameWindow.GameWindowLoad();
-            this.ShowGame();
+            var gameWindow = new GameWindow(game);
+            gameWindow.GameWindowLoad();
+            gameWindow.ShowDialog();
         }
-
-        private void ShowGame()
+        
+        public void DrowMenuWindow(IGame game)
         {
-            this.gameWindow.ShowDialog();
+            var menu = new frmMenu(game);
+            menu.ShowDialog();
         }
     }
 }
